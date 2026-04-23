@@ -21,7 +21,8 @@ function App() {
         item.wife_mobile?.includes(number) ||
         item.system_phone_1?.includes(number) ||
         item.system_phone_2?.includes(number) ||
-        item.home_phone?.includes(number)
+        item.home_phone?.includes(number) ||
+        item.whatsapp_number?.includes(number)
     });
     console.log(filteredItems.length);
     setFilteredItems(filteredItems);
