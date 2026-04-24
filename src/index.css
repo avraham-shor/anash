@@ -126,7 +126,7 @@ code {
 }
 
 .search-input {
-  width: 100%;
+  width: 77.8%;
   padding: 10px;
   border: 3px solid var(--border);
   border-radius: 2px;
@@ -136,7 +136,7 @@ code {
 }
 
 .search-button {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 3px solid var(--border);
   border-radius: 3px;
