@@ -70,7 +70,7 @@ function App() {
           />
           <button className='search-button' onClick={() => searchByName(searchName)}>חפש לפי שם</button>
         </div>
-        {filteredItems.length > 0 && <>
+        {filteredItems.length > 0 && <div className='search-container'>
         <h3>נמצאו {filteredItems.length} תוצאות</h3>
          <ul>
           {filteredItems.map(
@@ -79,7 +79,7 @@ function App() {
             </div>
           )}
         </ul>
-        </>
+        </div>
         }
       {filteredItems.length === 0 && <div>
         <p>לא נמצאו תוצאות</p>

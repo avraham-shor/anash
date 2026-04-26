@@ -123,6 +123,12 @@ code {
   background-color: var(--bg-card);
   color: var(--text-h);
   align-items: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
