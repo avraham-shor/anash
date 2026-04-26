@@ -1,4 +1,19 @@
+
+
+
+
 export function Card({ item }) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+
+    const role = urlParams.get('role');
+    const userId = urlParams.get('userid'); // URL has 'userid' (lowercase)
+    const isAdmin = role === 'admin';
+
+    console.log("Role:", role);
+    console.log("UserId:", userId);
+
     return (
         <div className="card">
             <h2>{item.salutation} {item.full_name_search}</h2>
@@ -13,8 +28,8 @@ export function Card({ item }) {
                 {item.email_2 && <span> 📧 אימייל: {item.email_2} </span>}
             </p>
             <p>
-                {item.system_phone_1 && <span> ☎️ טלפון מערכת 1: {item.system_phone_1}</span>}
-                {item.system_phone_2 && <span> ☎️ טלפון מערכת 2: {item.system_phone_2}</span>}
+                {isAdmin && item.system_phone_1 && <span> ☎️ טלפון מערכת 1: {item.system_phone_1}</span>}
+                {isAdmin && item.system_phone_2 && <span> ☎️ טלפון מערכת 2: {item.system_phone_2}</span>}
             </p>
             <p>
                 {item.home_phone && <span> ☎️ טלפון בית: {item.home_phone}</span>}
@@ -26,8 +41,8 @@ export function Card({ item }) {
             </p>
             {item.is_groom_of_rabbi && <p> 🎩 חתן של הרב: {item.is_groom_of_rabbi}</p>}
             <p>
-                {item.id_number && <span> 🪪 תעודת זהות בעל: {item.id_number} </span>}
-                {item.wife_id_number && <span> 🪪 תעודת זהות אשה: {item.wife_id_number} </span>}
+                {isAdmin && item.id_number && <span> 🪪 תעודת זהות בעל: {item.id_number} </span>}
+                {isAdmin && item.wife_id_number && <span> 🪪 תעודת זהות אשה: {item.wife_id_number} </span>}
             </p>
         </div>
     );

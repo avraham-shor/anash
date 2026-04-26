@@ -70,13 +70,17 @@ function App() {
           />
           <button className='search-button' onClick={() => searchByName(searchName)}>חפש לפי שם</button>
         </div>
-        {filteredItems.length > 0 && <ul>
+        {filteredItems.length > 0 && <>
+        <h3>נמצאו {filteredItems.length} תוצאות</h3>
+         <ul>
           {filteredItems.map(
             item => <div key={item.id}>
               <Card item={item} />
             </div>
           )}
-        </ul>}
+        </ul>
+        </>
+        }
       {filteredItems.length === 0 && <div>
         <p>לא נמצאו תוצאות</p>
         <button className='search-button' onClick={() => setFilteredItems(items)}>הצג את כל הרשימה</button>
