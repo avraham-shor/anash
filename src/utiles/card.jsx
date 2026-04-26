@@ -11,8 +11,6 @@ export function Card({ item }) {
     const userId = urlParams.get('userid'); // URL has 'userid' (lowercase)
     const isAdmin = role === 'admin';
 
-    console.log("Role:", role);
-    console.log("UserId:", userId);
 
     return (
         <div className="card">
