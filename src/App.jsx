@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>רשימת אנ"ש לפי מספר טלפון</h1>
+      <h1>רשימת אנ"ש</h1>
 
       <div>
         <input
