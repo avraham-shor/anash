@@ -100,7 +100,7 @@ function App() {
             searchBySynagogue(e.target.value);
           }}
         >
-          <option value="">חפש לפי בית כנסת</option>
+          <option value="">כל בתי הכנסת</option>
           {synagogues.map(synagogue => (
             <option key={synagogue.value} value={synagogue.value}>
               {synagogue.lable}
